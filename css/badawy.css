@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+:root {
+    --bg-main: #060913;
+    --bg-card: rgba(19, 26, 38, 0.6);
+    --bg-card-hover: rgba(28, 38, 54, 0.8);
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+    --primary-color: #a855f7;
+    --secondary-color: #3b82f6;
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed; width: 100%; height: 100%;
+    top: 0; left: 0; z-index: 1; pointer-events: none;
+}
+
+header, main, footer, .portfolio-credit-box { position: relative; z-index: 2; }
+section { padding: 100px 10%; }
+
+h2 {
+    font-size: 2.3rem; font-weight: 700; text-align: center; margin-bottom: 50px;
+    background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* الهيدر العلوي - كمبيوتر */
+header {
+    position: fixed; top: 0; left: 0; width: 100%;
+    background: rgba(6, 9, 19, 0.7); backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03); z-index: 1000; padding: 20px 10%;
+}
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 700; color: #fff; }
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav ul li a { color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: var(--transition); }
+nav ul li a:hover { color: var(--primary-color); }
+
+/* الهيرو سيكشن - كمبيوتر */
+#hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.06), transparent 70%);
+}
+.hero-container { display: flex; align-items: center; gap: 60px; max-width: 1100px; width: 100%; text-align: right; }
+
+.hero-img-box {
+    width: 280px; height: 280px; border-radius: 50%; padding: 6px;
+    background: var(--gradient); flex-shrink: 0;
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+}
+.hero-profile-img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;
+    background: var(--bg-main);
+}
+
+.hero-content { flex-grow: 1; }
+#hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; }
+#hero .highlight { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 35px; font-weight: 400; }
+
+.cta-buttons { display: flex; gap: 20px; }
+.btn { padding: 13px 30px; font-size: 0.95rem; font-weight: 600; border-radius: 50px; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; }
+.btn.primary { background: var(--gradient); color: #fff; }
+.btn.primary:hover { transform: translateY(-3px); box-shadow: 0 5px 20px rgba(168, 85, 247, 0.4); }
+.btn.secondary { background: rgba(255,255,255,0.03); color: #fff; border: 1px solid rgba(255,255,255,0.1); }
+.btn.secondary:hover { border-color: var(--primary-color); transform: translateY(-3px); }
+
+/* سيكشن عني - كمبيوتر */
+.about-box { max-width: 800px; margin: 0 auto; background: var(--bg-card); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.02); text-align: center; }
+.about-box p { font-size: 1.15rem; line-height: 1.8; color: #d1d5db; }
+
+/* المهارات - كمبيوتر */
+.skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.skill-category { background: var(--bg-card); padding: 40px 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.02); text-align: center; }
+.system-featured { border: 1px dashed rgba(168, 85, 247, 0.3); background: linear-gradient(145deg, rgba(23, 16, 38, 0.6), rgba(19, 26, 38, 0.4)); }
+.icon-box { font-size: 2.3rem; margin-bottom: 20px; display: flex; justify-content: center; gap: 10px; }
+.system-icon { color: #a855f7; }
+.frontend-icon { color: #3b82f6; }
+.backend-icon { color: #10b981; }
+.skill-category h3 { font-size: 1.3rem; margin-bottom: 12px; color: #fff; }
+.skill-category p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
+
+/* المشاريع - كمبيوتر */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
+.project-card { background: var(--bg-card); border-radius: 20px; padding: 35px; border: 1px solid rgba(255,255,255,0.02); display: flex; flex-direction: column; justify-content: space-between; }
+.project-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.project-icon { font-size: 1.8rem; }
+.project-card h3 { font-size: 1.4rem; color: #fff; }
+.project-aim { background: rgba(168, 85, 247, 0.06); border-right: 3px solid var(--primary-color); padding: 8px 12px; font-size: 0.85rem; color: #e5e7eb; margin-bottom: 15px; border-radius: 0 6px 6px 0; line-height: 1.5; text-align: right; }
+.project-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; text-align: justify; }
+.tech-tags { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.tech-tags span { background: rgba(255,255,255,0.04); padding: 3px 10px; border-radius: 50px; font-size: 0.75rem; color: var(--text-secondary); }
+.live-link { background: rgba(59, 130, 246, 0.08); color: var(--secondary-color); padding: 10px 20px; border-radius: 10px; font-weight: 600; text-decoration: none; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid rgba(59, 130, 246, 0.15); font-size: 0.9rem; }
+.live-link:hover { background: var(--secondary-color); color: #fff; }
+
+/* خدمات السوشيال - كمبيوتر */
+.services-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.premium-service-card { background: var(--bg-card); border-radius: 20px; padding: 30px; border: 1px solid rgba(255,255,255,0.02); position: relative; overflow: hidden; }
+.service-glow-line { position: absolute; top: 0; left: 0; width: 100%; height: 3px; }
+.premium-service-card h3 { font-size: 1.25rem; color: #fff; margin-bottom: 12px; }
+.service-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; text-align: justify; }
+.service-features { list-style: none; display: flex; flex-direction: column; gap: 8px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.03); }
+.service-features li { font-size: 0.85rem; color: #d1d5db; display: flex; align-items: center; gap: 8px; }
+.service-features li i { color: #10b981; }
+
+/* التواصل - كمبيوتر */
+.phone-display-container { text-align: center; margin-bottom: 35px; }
+.phone-display-container p { font-size: 1.5rem; font-weight: 600; color: #fff; }
+.phone-display-container a { color: var(--primary-color); text-decoration: none; border-bottom: 1px dashed var(--secondary-color); }
+.platforms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.platform-card { background: var(--bg-card); border-radius: 16px; padding: 25px 15px; border: 1px solid rgba(255,255,255,0.02); text-align: center; text-decoration: none; color: inherit; }
+.platform-card i { font-size: 2.2rem; margin-bottom: 12px; }
+.platform-card h3 { font-size: 1.15rem; color: #fff; margin-bottom: 6px; }
+.platform-card p { font-size: 0.8rem; color: var(--text-secondary); }
+.platform-card:hover { border-color: var(--primary-color); }
+
+.portfolio-credit-box { max-width: 800px; margin: 50px auto 10px auto; background: rgba(255,255,255,0.01); border: 1px dashed rgba(168, 85, 247, 0.2); padding: 25px; border-radius: 20px; text-align: center; }
+.portfolio-credit-box p { font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 6px; }
+.portfolio-credit-box span { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; display: block; }
+
+footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,255,0.02); color: var(--text-secondary); font-size: 0.9rem; }
+
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+
+/* ======================================================== */
+/* 📱📱📱 تصفير وهندسة أبعاد الفون تماماً (تعديل جذري) 📱📱📱 */
+/* ======================================================== */
+@media (max-width: 768px) {
+    /* 1. زيادة الحواف الجانبية لكل السكاشن عشان المربعات متلزقش ف الشاشة */
+    section { padding: 45px 6%; }
+    h2 { font-size: 1.6rem; margin-bottom: 25px; }
+    
+    header { padding: 10px 5%; background: rgba(6, 9, 19, 0.95); }
+    .logo { font-size: 1.15rem; }
+    nav ul { display: none; }
+    
+ /* ضبط الهيرو في نص الشاشة بالظبط ومنع ظهور سيكشن عني أول ما تفتح */
+    #hero { 
+        min-height: 100vh !important; /* إجبار الواجهة تاخد طول الشاشة بالكامل */
+        height: 100vh !important; 
+        padding-top: 60px !important; /* مسافة خفيفة للهيدر */
+        padding-bottom: 0 !important;
+        display: flex !important;
+        align-items: center !important; /* سنترة كل المحتوى عمودياً في النص */
+        justify-content: center !important; /* سنترة كل المحتوى أفقياً في النص */
+    }
+    .hero-container { 
+        flex-direction: column !important; 
+        text-align: center !important; 
+        gap: 20px !important; 
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* تصغير حجم دائرة الصورة عشان تسيب مساحة للكلام والأزرار تبان فوراً */
+    .hero-img-box { 
+        width: 140px !important; 
+        height: 140px !important; 
+        margin: 0 auto !important;
+        padding: 3px !important;
+    }
+    
+    .hero-content { width: 100% !important; text-align: center !important; }
+    #hero h1 { font-size: 1.8rem !important; line-height: 1.3 !important; margin-bottom: 8px !important; }
+    .hero-subtitle { font-size: 0.95rem !important; margin-bottom: 20px !important; padding: 0 !important; }
+    
+    /* الأزرار تحت بعض وملمومة وبتبان عل طول في الشاشة */
+    .cta-buttons { 
+        flex-direction: column !important; 
+        width: 85% !important; 
+        margin: 0 auto !important; 
+        gap: 10px !important; 
+    }
+    .btn { width: 100% !important; justify-content: center !important; padding: 11px !important; font-size: 0.85rem !important; }
+    
+    /* 3. حل مشكلة المربعات اللي لازقة في الحواف */
+    .skills-container, .projects-grid, .services-showcase, .platforms-grid {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+        width: 100% !important;
+        padding: 0 4px !important; /* مسافة أمان داخلية لمنع اللصق */
+    }
+    
+    /* تصغير المربعات نفسها وسحب الحشو الداخلي الزيادة عشان تلم نفسها جوه الفون */
+    .skill-category, .project-card, .premium-service-card, .platform-card { 
+        padding: 22px 16px !important; 
+        border-radius: 14px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+    
+    .about-box { padding: 22px 16px !important; }
+    .about-box p { font-size: 0.95rem !important; line-height: 1.6 !important; text-align: justify; }
+    
+    .project-card h3 { font-size: 1.15rem !important; }
+    .project-card p, .service-desc { font-size: 0.85rem !important; line-height: 1.5 !important; text-align: justify; }
+    .project-aim { font-size: 0.78rem !important; padding: 5px 8px !important; }
+    
+    .phone-display-container p { font-size: 1.1rem !important; }
+    .portfolio-credit-box { padding: 18px 12px !important; margin: 25px 4px 0 4px !important; }
+}
