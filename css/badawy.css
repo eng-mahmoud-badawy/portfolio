@@ -216,3 +216,26 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
     .phone-display-container p { font-size: 1.1rem !important; }
     .portfolio-credit-box { padding: 18px 12px !important; margin: 25px 4px 0 4px !important; }
 }
+
+/* تنسيقات خاصة بالموبايل لتعديل الخطوط والمسافات */
+@media (max-width: 768px) {
+    /* تظبيط سكشن "عني" أو الوصف الشخصي */
+    .about-content, .about p {
+        font-size: 15px !important; /* حجم خط موحد ومريح للعين جوه الفون */
+        line-height: 1.6 !important; /* مسافة بين السطور عشان الكلام ميتداخلش */
+        text-align: justify; /* يخلي السطور متساوية ومترتبة */
+        padding: 0 10px !important; /* تقليل المسافات الجانبية الكبيرة */
+        margin-bottom: 15px !important;
+    }
+
+    /* العناوين الرئيسية في الموبايل */
+    .about h2, .section-title {
+        font-size: 24px !important; /* حجم عنوان متناسق مش ضخم */
+        margin-bottom: 20px !important;
+    }
+
+    /* تظبيط أي مسافات عشوائية في السكشن */
+    .about {
+        padding: 40px 15px !important; /* مسافة فوق وتحت متناسقة */
+    }
+}
