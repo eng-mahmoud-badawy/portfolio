@@ -127,11 +127,7 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
 
 
 
-/* ======================================================== */
-/* 📱📱📱 تصفير وهندسة أبعاد الفون تماماً (تعديل جذري) 📱📱📱 */
-/* ======================================================== */
 @media (max-width: 768px) {
-    /* 1. زيادة الحواف الجانبية لكل السكاشن عشان المربعات متلزقش ف الشاشة */
     section { padding: 45px 6%; }
     h2 { font-size: 1.6rem; margin-bottom: 25px; }
     
@@ -139,15 +135,14 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
     .logo { font-size: 1.15rem; }
     nav ul { display: none; }
     
- /* ضبط الهيرو في نص الشاشة بالظبط ومنع ظهور سيكشن عني أول ما تفتح */
     #hero { 
-        min-height: 100vh !important; /* إجبار الواجهة تاخد طول الشاشة بالكامل */
+        min-height: 100vh !important; 
         height: 100vh !important; 
-        padding-top: 60px !important; /* مسافة خفيفة للهيدر */
+        padding-top: 60px !important; 
         padding-bottom: 0 !important;
         display: flex !important;
-        align-items: center !important; /* سنترة كل المحتوى عمودياً في النص */
-        justify-content: center !important; /* سنترة كل المحتوى أفقياً في النص */
+        align-items: center !important; 
+        justify-content: center !important; 
     }
     .hero-container { 
         flex-direction: column !important; 
@@ -159,7 +154,6 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
         justify-content: center !important;
     }
     
-    /* تصغير حجم دائرة الصورة عشان تسيب مساحة للكلام والأزرار تبان فوراً */
     .hero-img-box { 
         width: 140px !important; 
         height: 140px !important; 
@@ -171,7 +165,6 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
     #hero h1 { font-size: 1.8rem !important; line-height: 1.3 !important; margin-bottom: 8px !important; }
     .hero-subtitle { font-size: 0.95rem !important; margin-bottom: 20px !important; padding: 0 !important; }
     
-    /* الأزرار تحت بعض وملمومة وبتبان عل طول في الشاشة */
     .cta-buttons { 
         flex-direction: column !important; 
         width: 85% !important; 
@@ -182,7 +175,6 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
     
    
     
-    /* تصغير المربعات نفسها وسحب الحشو الداخلي الزيادة عشان تلم نفسها جوه الفون */
     .skill-category, .project-card, .premium-service-card, .platform-card { 
         padding: 22px 16px !important; 
         border-radius: 14px !important;
@@ -200,32 +192,27 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
     .portfolio-credit-box { padding: 18px 12px !important; margin: 25px 4px 0 4px !important; }
 }
 
-/* تنسيقات خاصة بالموبايل لتعديل الخطوط والمسافات */
 @media (max-width: 768px) {
-    /* تظبيط سكشن "عني" أو الوصف الشخصي */
     .about-content, .about p {
-        font-size: 15px !important; /* حجم خط موحد ومريح للعين جوه الفون */
-        line-height: 1.6 !important; /* مسافة بين السطور عشان الكلام ميتداخلش */
-        text-align: justify; /* يخلي السطور متساوية ومترتبة */
-        padding: 0 10px !important; /* تقليل المسافات الجانبية الكبيرة */
+        font-size: 15px !important; 
+        line-height: 1.6 !important; 
+        text-align: justify; 
+        padding: 0 10px !important; 
         margin-bottom: 15px !important;
     }
 
-    /* العناوين الرئيسية في الموبايل */
     .about h2, .section-title {
-        font-size: 24px !important; /* حجم عنوان متناسق مش ضخم */
+        font-size: 24px !important; 
         margin-bottom: 20px !important;
     }
 
-    /* تظبيط أي مسافات عشوائية في السكشن */
     .about {
-        padding: 40px 15px !important; /* مسافة فوق وتحت متناسقة */
+        padding: 40px 15px !important; 
     }
 }
 
-/* السكشن الرئيسي */
 .luxury-smm-marquee {
-    background: #07050a; /* تعميق الخلفية لزيادة فخامة الألوان */
+    background: #07050a; 
     padding: 100px 0;
     font-family: 'Cairo', sans-serif;
     color: #fff;
@@ -244,7 +231,6 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
     padding: 0 20px;
 }
 
-/* تنسيق منطقة العناوين */
 .smm-marquee-title {
     text-align: center;
     max-width: 620px;
@@ -276,7 +262,6 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
     line-height: 1.7;
 }
 
-/* منطقة المنصات العائمة */
 .floating-icons-container {
     display: flex;
     flex-wrap: wrap;
@@ -288,7 +273,6 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
     padding: 10px 0;
 }
 
-/* كارت المنصة بنظام الزجاج الفاخر (Glassmorphic Card) */
 .marquee-item {
     display: flex;
     align-items: center;
@@ -301,7 +285,6 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
     border-radius: 16px;
     cursor: pointer;
     
-    /* تفعيل كارت الشاشة لأعلى سلاسة ممكنة */
     will-change: transform;
     transform: translate3d(0, 0, 0);
     transition: background 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
@@ -309,11 +292,9 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
                 box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
                 transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     
-    /* أنيميشن العوم الانسيابي النقي */
     animation: ultraSmoothFloat 5s ease-in-out infinite;
 }
 
-/* تمويج عشوائي احترافي للأوقات */
 .marquee-item:nth-child(1) { animation-duration: 4.8s; animation-delay: 0s; }
 .marquee-item:nth-child(2) { animation-duration: 5.2s; animation-delay: 0.8s; }
 .marquee-item:nth-child(3) { animation-duration: 4.5s; animation-delay: 1.4s; }
@@ -336,17 +317,14 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
     transition: color 0.3s ease;
 }
 
-/* تأثيرات الـ Premium Hover المضيئة (Glow Effects) */
 .marquee-item:hover {
     background: rgba(255, 255, 255, 0.03);
-    /* إلغاء الـ animation في الهوفر بـ translate3d ناعم للحفاظ على السلاسة */
     transform: translate3d(0, -6px, 0) scale(1.02) !important;
 }
 
 .marquee-item:hover span { color: #ffffff; }
 .marquee-item:hover svg { transform: scale(1.05); }
 
-/* ألوان الإضاءة والتوجهات المخصصة لكل لوجو */
 .marquee-item.fb:hover { border-color: rgba(24, 119, 242, 0.4); box-shadow: 0 10px 25px rgba(24, 119, 242, 0.15); }
 .marquee-item.fb:hover svg { fill: #1877f2; }
 
@@ -367,17 +345,15 @@ footer { text-align: center; padding: 35px; border-top: 1px solid rgba(255,255,2
 .marquee-item.tg:hover svg { fill: #229ed9; }
 
 
-/* 🔄 أنيميشن العوم فائق السلاسة والنعومة (GPU Optimized) */
 @keyframes ultraSmoothFloat {
     0%, 100% {
         transform: translate3d(0, 0, 0);
     }
     50% {
-        transform: translate3d(0, -10px, 0); /* تحريك رأسي ناعم جداً بدون أي تكسير */
+        transform: translate3d(0, -10px, 0); 
     }
 }
 
-/* 💻 الشاشات الكبيرة الديسكتوب */
 @media (min-width: 992px) {
     .smm-marquee-title h2 { font-size: 2.4rem; }
     .premium-subtitle { font-size: 1.05rem; }
