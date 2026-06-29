@@ -18,13 +18,14 @@ function revealSections() {
   import { getFirestore, collection, addDoc, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
   // الـ Config الحقيقية بتاعتك من الصورة
-  const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyDCuv6hvEsGtAceLrjiqF2WTYVQlqP_iM4",
     authDomain: "portfolio-comments-daa5e.firebaseapp.com",
+    databaseURL: "https://portfolio-comments-daa5e-default-rtdb.firebaseio.com",
     projectId: "portfolio-comments-daa5e",
     storageBucket: "portfolio-comments-daa5e.firebasestorage.app",
     messagingSenderId: "4252694929",
-    appId: "1:4252694929:web:188950f43d308f07854230",
+    appId: "1:4252694929:web:188950f43d308f07854238",
     measurementId: "G-T9SBY7FSY3"
   };
 
