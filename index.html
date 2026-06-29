@@ -107,7 +107,7 @@
                 </div>
 
             </div>
-        </section>
+        </section> 
 
 
 <section class="luxury-smm-marquee">
@@ -131,6 +131,45 @@
     </div>
 </section>
 
+<!-- ================= سيكشن التعليقات الفاخر ================= -->
+<section class="portfolio-comments-section">
+    <div class="comments-wrapper">
+        
+        <!-- عنوان السيكشن -->
+        <div class="comments-title">
+            <span class="badge-premium">آراء الزوار</span>
+            <h3>لوحة آراء وتقييمات العملاء</h3>
+            <p class="premium-subtitle">شاركني رأيك أو استفسارك حول خدمات تطوير المواقع والتطبيقات</p>
+        </div>
+
+        <!-- فورمة كتابة تعليق جديد -->
+        <form id="commentForm" class="comment-form-box">
+            <div class="input-group">
+                <input type="text" id="visitorName" placeholder="إسمك الكريم..." required>
+            </div>
+            <div class="input-group">
+                <textarea id="visitorMessage" rows="4" placeholder="اكتب تعليقك هنا بكل حرية..." required></textarea>
+            </div>
+            <button type="submit" id="submitBtn">
+                <span>إرسال التعليق الفاخر</span>
+                <svg viewBox="0 0 24 24" class="btn-icon"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+        </form>
+
+        <!-- مكان عرض الكومنتات (هتظهر هنا أوتوماتيك من الداتا بيز) -->
+        <div id="commentsContainer" class="comments-display-list">
+            <!-- الكارت ده تجريبي بس عشان تشوف الشكل قبل ما نربط، الـ JS هيشيله ويجيب الحقيقي بعدين -->
+            <div class="single-comment-card dummy-card">
+                <div class="comment-header">
+                    <span class="comment-user-name">محمود بدوي (تجربة)</span>
+                    <span class="comment-date">اليوم</span>
+                </div>
+                <p class="comment-text">هنا هتظهر تعليقات عملائك وزوار موقعك بشكل تلقائي ومنظم جداً أول ما نربط قاعدة البيانات!</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 
         <section id="platforms" class="reveal">
             <h2>تواصل معي</h2>
